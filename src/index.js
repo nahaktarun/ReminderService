@@ -20,12 +20,12 @@ const setupAndStartServer = () => {
   app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
     jobs();
-    sentBasicEmail(
-      "support@tarun.com",
-      "tarunnahak25@gmail.com",
-      "Hi there",
-      "How are you?"
-    );
+    // sentBasicEmail(
+    //   "support@tarun.com",
+    //   "tarunnahak25@gmail.com",
+    //   "Hi there",
+    //   "How are you?"
+    // );
   });
 };
 
