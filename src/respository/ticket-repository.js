@@ -34,6 +34,17 @@ class TicketRepository {
       throw error;
     }
   }
+  async update(ticketid, data) {
+    try {
+      const ticket = await notificationTicket.findByPk(ticketid);
+      ticket.status = data.status;
+      await ticket.save();
+
+      return ticket;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 module.exports = TicketRepository;
