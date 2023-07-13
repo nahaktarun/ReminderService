@@ -22,7 +22,7 @@ const setupAndStartServer = async () => {
   app.post("/api/v1/tickets", TicketController.create);
 
   const channel = await createChannel();
-  subscribeMessage(channel, EmailService.testingQueue, REMINDER_BINDING_KEY);
+  subscribeMessage(channel, EmailService.subscribeEvent, REMINDER_BINDING_KEY);
 
   app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
